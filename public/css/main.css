@@ -114,16 +114,89 @@ button {
   border: 1px solid gray;
 }
 
+.menu {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  position: relative;
+}
+.menu input {
+  display: none;
+}
+@media (min-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
+.menu div {
+  --line-thickness: 16%;
+  height: var(--line-thickness);
+  width: 2.7rem;
+  background-color: white;
+  border-radius: 1rem;
+  opacity: 1;
+  margin-bottom: auto;
+  margin-top: auto;
+  transition: 0.3s ease;
+}
+.menu div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: var(--line-thickness);
+  background-color: white;
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+.menu div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--line-thickness);
+  background-color: white;
+  border-radius: 1rem;
+  transform: translateY();
+  transition: 0.3s ease;
+}
+.menu.open-menu div {
+  background-color: rgba(255, 255, 255, 0);
+}
+.menu.open-menu div::before {
+  transform: translateY(calc(var(--width) / 2)) translateY(-50%) rotateZ(45deg);
+}
+.menu.open-menu div::after {
+  transform: translateY(calc(var(--width) / -2)) translateY(50%) rotateZ(-45deg);
+}
+
 header {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   height: 80vw;
-  background-image: url(../assets/image-hero-mobile.jpg);
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent), url(../assets/image-hero-mobile.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+  padding: 2rem 1rem;
+}
+header li {
+  display: none;
+}
+
+.header-container {
+  height: 5vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container img {
+  height: 100%;
 }
 
 main {

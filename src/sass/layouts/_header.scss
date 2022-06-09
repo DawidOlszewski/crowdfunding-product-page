@@ -1,3 +1,11 @@
 header {
-    background-image: url(../assets/image-hero-desktop.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 80vw;
+    background-image: url(../assets/image-hero-mobile.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

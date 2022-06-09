@@ -12,12 +12,14 @@
             href="./images/favicon-32x32.png"
         />
 
+        <link rel="stylesheet" href="css/main.css" />
+
         <title>Frontend Mentor | Crowdfunding product page</title>
     </head>
     <body>
         <header>
             <!-- background img -->
-            <img src="assets//logo.svg" alt="logo" />
+            <img src="assets/logo.svg" alt="logo" />
             <div class="hamburger button"></div>
             <nav>
                 <ul>
@@ -35,14 +37,13 @@
         </header>
 
         <main>
-            <img src="assets/logo-mastercraft.svg" alt="company logo" />
             <h1>Mastercraft Bamboo Monitor Riser</h1>
             <p>
                 A beautiful & handcrafted monitor stand to reduce neck and eye
                 strain.
             </p>
-            <div>
-                <button>Back this project Bookmark</button>
+            <div class="bookmark-container">
+                <button>Back this project</button>
                 <label>
                     <input type="checkbox" name="bookedmarked" id="" />
                     <img src="assets/icon-bookmark.svg" alt=""
@@ -50,7 +51,7 @@
             </div>
         </main>
 
-        <section>
+        <section class="info">
             <div>$89,914 of $100,000 backed</div>
             <div>5,007 total backers</div>
             <div>56 days left</div>
@@ -84,7 +85,7 @@
                         </p>
                         <div>
                             <p>101 left</p>
-                            <p>Select Reward</p>
+                            <button class="select-reward">Select Reward</button>
                         </div>
                     </div>
                 </li>
@@ -101,7 +102,7 @@
                         </p>
                         <div>
                             <p>64 left</p>
-                            <p>Select Reward</p>
+                            <button class="select-reward">Select Reward</button>
                         </div>
                     </div>
                 </li>
@@ -119,7 +120,9 @@
                         </p>
                         <div>
                             <p>0 left</p>
-                            <p>Out of Stock</p>
+                            <button class="select-reward" disabled>
+                                Select Reward
+                            </button>
                         </div>
                     </div>
                 </li>

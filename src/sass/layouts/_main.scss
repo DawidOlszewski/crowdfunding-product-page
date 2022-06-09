@@ -1,0 +1,36 @@
+main {
+    position: relative;
+
+    padding: 3rem 1.5rem 2rem;
+
+    text-align: center;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        width: 3.7rem;
+        height: 3.7rem;
+
+        background-image: url(../assets/logo-mastercraft.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transform: translate(-50%, -50%);
+    }
+}
+
+.bookmark-container {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        display: none;
+    }
+}

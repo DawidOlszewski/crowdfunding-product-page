@@ -75,7 +75,71 @@ select {
 :root {
   --clr-primary-300: hsl(176, 50%, 47%);
   --clr-primary-700: hsl(176, 72%, 28%);
+  --clr-neutral-200: hsl(0, 0%, 97%);
   --clr-neutral-700: hsl(0, 0%, 48%);
   --clr-neutral-1000: hsl(0, 0%, 0%);
-  --ff: font-family: "Commissioner", sans-serif;
+  --ff: "Commissioner", sans-serif;
+}
+
+body {
+  font-family: var(--ff);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+main,
+section {
+  background-color: white;
+  margin: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+button {
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  border: none;
+  background-color: var(--clr-primary-300);
+  border-radius: 3rem;
+  color: white;
+  font-weight: 500;
+}
+
+header {
+  background-image: url(../assets/image-hero-desktop.jpg);
+}
+
+main {
+  position: relative;
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+}
+main h1 {
+  font-size: 1.5rem;
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3.7rem;
+  height: 3.7rem;
+  background-image: url(../assets/logo-mastercraft.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+}
+
+.bookmark-container {
+  display: flex;
+  justify-content: space-between;
+}
+.bookmark-container input {
+  display: none;
+}
+
+body {
+  background-color: var(--clr-neutral-200);
 }

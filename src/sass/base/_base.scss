@@ -1,3 +1,26 @@
 body {
-    // font-famiy: ;
+    font-family: var(--ff);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+main,
+section {
+    background-color: white;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+}
+button {
+    height: 3.5rem;
+    padding: 0 1.5rem;
+
+    border: none;
+    background-color: var(--clr-primary-300);
+    border-radius: 3rem;
+
+    color: white;
+    font-weight: 500;
 }

@@ -1,0 +1,119 @@
+.product-container {
+    border-radius: 1rem;
+    border: 1px var(--clr-neutral-500) solid;
+
+    header {
+        margin: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        input {
+            display: none;
+        }
+    }
+
+    article {
+        margin: 1.5rem;
+
+        .product-purchase {
+            margin-top: 1.5rem;
+        }
+
+        button {
+            display: none;
+            margin-top: 1.5rem;
+        }
+    }
+
+    footer {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+
+        position: relative;
+
+        display: none;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        & > div {
+            padding-top: 1rem;
+
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input {
+            position: relative;
+
+            height: var(--input-size);
+            max-width: 15rem;
+            width: 50%;
+
+            padding: 0 2rem 0 3rem;
+            border-radius: 5rem;
+
+            // &:before {
+            //     content: '$';
+            //     position: absolute;
+            //     left: 1.5rem;
+            //     top: 50%;
+            // }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0rem;
+            right: 0rem;
+            height: 1px;
+            background-color: var(--clr-neutral-500);
+        }
+    }
+}
+
+article > .product-container {
+    article {
+        button {
+            display: block;
+        }
+    }
+}
+
+dialog .product-container {
+    header {
+        input {
+            display: block;
+        }
+    }
+}
+
+.product-container.product-checked {
+    footer {
+        display: block;
+    }
+}
+
+.pledge-info {
+    color: var(--clr-primary-300);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.product-amount {
+    padding-right: 0.5rem;
+    color: var(--clr-neutral-1000);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-purchase {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.product-purchase p {
+    display: flex;
+    align-items: center;
+}

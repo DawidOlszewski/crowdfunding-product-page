@@ -95,8 +95,12 @@ ul {
   padding-left: 0;
 }
 
-main,
-section {
+p {
+  color: var(--clr-neutral-500);
+}
+
+.container > main,
+.container > section {
   background-color: white;
   margin: 1.3rem var(--margin-container);
   border-radius: 1rem;
@@ -112,20 +116,76 @@ button {
   font-weight: 500;
 }
 
-.product-ul li {
-  margin: 1rem 0;
+.products-display {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.product-container {
   border-radius: 1rem;
-  padding: 1.6rem;
-  border: 1px solid var(--clr-neutral-400);
+  border: 1px var(--clr-neutral-500) solid;
 }
-.product-ul li h3 {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--clr-neutral-1000);
+.product-container header {
+  margin: 1.5rem;
+  display: flex;
+  align-items: center;
 }
-.product-ul li > div > p {
+.product-container header input {
+  display: none;
+}
+.product-container article {
+  margin: 1.5rem;
+}
+.product-container article .product-purchase {
   margin-top: 1.5rem;
-  color: var(--clr-neutral-500);
+}
+.product-container article button {
+  display: none;
+  margin-top: 1.5rem;
+}
+.product-container footer {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.product-container footer > div {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product-container footer input {
+  position: relative;
+  height: var(--input-size);
+  max-width: 15rem;
+  width: 50%;
+  padding: 0 2rem 0 3rem;
+  border-radius: 5rem;
+}
+.product-container footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0rem;
+  right: 0rem;
+  height: 1px;
+  background-color: var(--clr-neutral-500);
+}
+
+article > .product-container article button {
+  display: block;
+}
+
+dialog .product-container header input {
+  display: block;
+}
+
+.product-container.product-checked footer {
+  display: block;
 }
 
 .pledge-info {
@@ -135,19 +195,20 @@ button {
 }
 
 .product-amount {
-  margin: 1.3rem 0;
+  padding-right: 0.5rem;
+  color: var(--clr-neutral-1000);
   font-size: 2rem;
   font-weight: 700;
+}
+
+.product-purchase {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .product-purchase p {
   display: flex;
   align-items: center;
-  color: var(--clr-neutral-500);
-}
-.product-purchase p span {
-  padding-right: 0.5rem;
-  color: var(--clr-neutral-1000);
 }
 
 .menu {
@@ -226,7 +287,7 @@ button {
   background-color: var(--clr-neutral-400);
 }
 
-header {
+body > header {
   position: absolute;
   left: 0;
   top: 0;
@@ -238,7 +299,7 @@ header {
   background-size: contain;
   padding: 2rem var(--margin-container);
 }
-header li {
+body > header li {
   display: none;
 }
 
@@ -268,7 +329,6 @@ main button {
 main p {
   font-weight: 500;
   font-size: 0.9rem;
-  color: var(--clr-neutral-700);
 }
 main p {
   margin: 1.2rem 0;
@@ -301,17 +361,15 @@ main::before {
 .about-section {
   padding: var(--padding-default);
 }
-.about-section > h2 {
+.about-section > header {
+  margin-bottom: 1rem;
+}
+.about-section > header h2 {
   font-size: 1.2rem;
   margin: 2rem 0;
 }
-.about-section > p {
-  color: var(--clr-neutral-500);
-  font-weight: 500;
+.about-section > header p {
   margin-bottom: 1.7rem;
-}
-.about-section ul {
-  margin-top: 2.1rem;
 }
 
 .info-section {
@@ -329,7 +387,6 @@ main::before {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: var(--clr-neutral-500);
   font-size: 0.9rem;
   font-weight: 500;
 }

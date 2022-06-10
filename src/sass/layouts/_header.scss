@@ -10,7 +10,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
 
-    padding: 2rem 1rem;
+    padding: 2rem var(--margin-container);
 
     li {
         display: none;

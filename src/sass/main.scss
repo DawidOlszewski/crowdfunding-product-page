@@ -3,11 +3,14 @@
 @import 'base/root';
 @import 'base/base';
 
+@import 'abstract/mixins';
+
 @import 'components/producs-ul';
 @import 'components/menu-btn';
+@import 'components/progress-bar';
 
 @import 'layouts/header';
 @import 'layouts/main';
 @import 'layouts/about-section';
-
+@import 'layouts/info-section';
 @import 'pages/index';

@@ -76,9 +76,14 @@ select {
   --clr-primary-300: hsl(176, 50%, 47%);
   --clr-primary-700: hsl(176, 72%, 28%);
   --clr-neutral-200: hsl(0, 0%, 97%);
+  --clr-neutral-400: hsl(0, 0%, 80%);
+  --clr-neutral-500: hsl(0, 0%, 60%);
   --clr-neutral-700: hsl(0, 0%, 48%);
   --clr-neutral-1000: hsl(0, 0%, 0%);
   --ff: "Commissioner", sans-serif;
+  --margin-container: 7vw;
+  --padding-default: 1.5rem;
+  --input-size: 3rem;
 }
 
 body {
@@ -93,12 +98,12 @@ ul {
 main,
 section {
   background-color: white;
-  margin: 1rem 2rem;
+  margin: 1rem var(--margin-container);
   border-radius: 1rem;
 }
 
 button {
-  height: 3.5rem;
+  height: var(--input-size);
   padding: 0 1.5rem;
   border: none;
   background-color: var(--clr-primary-300);
@@ -172,6 +177,20 @@ button {
   transform: translateY(calc(var(--width) / -2)) translateY(50%) rotateZ(-45deg);
 }
 
+.progress-bar {
+  border-radius: 1rem;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--clr-neutral-400);
+}
+
+.progress-slider {
+  border-radius: 1rem;
+  height: 100%;
+  width: var(--percentage);
+  background-color: var(--clr-primary-300);
+}
+
 header {
   position: absolute;
   left: 0;
@@ -182,7 +201,7 @@ header {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 2rem 1rem;
+  padding: 2rem var(--margin-container);
 }
 header li {
   display: none;
@@ -204,7 +223,24 @@ main {
   text-align: center;
 }
 main h1 {
+  font-weight: 700;
   font-size: 1.5rem;
+}
+main button {
+  max-width: 15rem;
+  width: calc(100% - var(--input-size) - 1rem);
+}
+main p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--clr-neutral-700);
+}
+main p {
+  margin: 1.2rem 0;
+}
+main label {
+  width: var(--input-size);
+  height: var(--input-size);
 }
 main::before {
   content: "";
@@ -228,7 +264,42 @@ main::before {
 }
 
 .about {
-  padding: 1rem;
+  padding: var(--padding-default);
+}
+
+.info-section {
+  padding: var(--padding-default);
+  display: flex;
+  flex-flow: column nowrap;
+}
+.info-section .progress-bar {
+  margin: 1rem 0;
+}
+
+.data div {
+  position: relative;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--clr-neutral-500);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.data div h3 {
+  font-weight: 900;
+  font-size: 1.7rem;
+  color: var(--clr-neutral-1000);
+}
+.data div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4rem;
+  height: 1px;
+  background-color: var(--clr-neutral-400);
+  transform: translateX(-50%);
 }
 
 body {

@@ -1,14 +1,30 @@
 main {
-    // position: relative;
-    // top: 20rem;
-    // background-color: red;
-
     padding: 3rem 1.5rem 2rem;
 
     text-align: center;
 
     h1 {
+        font-weight: 700;
         font-size: 1.5rem;
+    }
+
+    button {
+        max-width: 15rem;
+        width: calc(100% - var(--input-size) - 1rem);
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--clr-neutral-700);
+    }
+
+    p {
+        margin: 1.2rem 0;
+    }
+
+    label {
+        @include icon-size;
     }
 
     &::before {

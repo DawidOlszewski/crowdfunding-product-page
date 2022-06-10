@@ -10,11 +10,11 @@ ul {
 main,
 section {
     background-color: white;
-    margin: 1rem 2rem;
+    margin: 1rem var(--margin-container);
     border-radius: 1rem;
 }
 button {
-    height: 3.5rem;
+    height: var(--input-size);
     padding: 0 1.5rem;
 
     border: none;

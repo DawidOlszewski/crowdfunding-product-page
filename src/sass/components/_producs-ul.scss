@@ -1,6 +1,40 @@
 .product-ul li {
     margin: 1rem 0;
-    border-radius: 2rem;
-    padding: 1rem;
-    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 1.6rem;
+    border: 1px solid var(--clr-neutral-400);
+
+    h3 {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--clr-neutral-1000);
+    }
+
+    & > div > p {
+        margin-top: 1.5rem;
+        color: var(--clr-neutral-500);
+    }
+}
+
+.pledge-info {
+    color: var(--clr-primary-300);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.product-amount {
+    margin: 1.3rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-purchase p {
+    display: flex;
+    align-items: center;
+    color: var(--clr-neutral-500);
+
+    span {
+        padding-right: 0.5rem;
+        color: var(--clr-neutral-1000);
+    }
 }

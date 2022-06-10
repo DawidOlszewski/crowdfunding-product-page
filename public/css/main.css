@@ -98,13 +98,13 @@ ul {
 main,
 section {
   background-color: white;
-  margin: 1rem var(--margin-container);
+  margin: 1.3rem var(--margin-container);
   border-radius: 1rem;
 }
 
 button {
   height: var(--input-size);
-  padding: 0 1.5rem;
+  padding: 0 2.2rem;
   border: none;
   background-color: var(--clr-primary-300);
   border-radius: 3rem;
@@ -114,9 +114,40 @@ button {
 
 .product-ul li {
   margin: 1rem 0;
-  border-radius: 2rem;
-  padding: 1rem;
-  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  border: 1px solid var(--clr-neutral-400);
+}
+.product-ul li h3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--clr-neutral-1000);
+}
+.product-ul li > div > p {
+  margin-top: 1.5rem;
+  color: var(--clr-neutral-500);
+}
+
+.pledge-info {
+  color: var(--clr-primary-300);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.product-amount {
+  margin: 1.3rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.product-purchase p {
+  display: flex;
+  align-items: center;
+  color: var(--clr-neutral-500);
+}
+.product-purchase p span {
+  padding-right: 0.5rem;
+  color: var(--clr-neutral-1000);
 }
 
 .menu {
@@ -191,6 +222,10 @@ button {
   background-color: var(--clr-primary-300);
 }
 
+.select-reward:disabled {
+  background-color: var(--clr-neutral-400);
+}
+
 header {
   position: absolute;
   left: 0;
@@ -263,8 +298,20 @@ main::before {
   display: none;
 }
 
-.about {
+.about-section {
   padding: var(--padding-default);
+}
+.about-section > h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+.about-section > p {
+  color: var(--clr-neutral-500);
+  font-weight: 500;
+  margin-bottom: 1.7rem;
+}
+.about-section ul {
+  margin-top: 2.1rem;
 }
 
 .info-section {

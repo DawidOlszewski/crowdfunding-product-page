@@ -445,6 +445,10 @@ main::before {
   padding: var(--padding-default);
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .body-container {
   position: absolute;
   top: 60vw;

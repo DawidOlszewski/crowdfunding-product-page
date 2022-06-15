@@ -12,3 +12,7 @@
 .back-project-modal {
     @include section-padding;
 }
+
+.invisible {
+    visibility: hidden;
+}

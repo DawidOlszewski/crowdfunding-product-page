@@ -1,5 +1,5 @@
 .info-section {
-    padding: var(--padding-default);
+    @include section-padding;
 
     display: flex;
     flex-flow: column nowrap;

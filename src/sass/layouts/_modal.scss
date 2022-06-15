@@ -1,0 +1,14 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(black, 0.3);
+}
+
+.modal-container {
+    @include container($has-margin-top: false);
+    @include content-container-positioning($top: 30vw);
+}
+
+.back-project-modal {
+    @include section-padding;
+}

@@ -11,14 +11,14 @@ p {
     color: var(--clr-neutral-500);
 }
 
-.container > main,
-.container > section {
-    background-color: white;
-    margin: 1.3rem var(--margin-container);
-    border-radius: 1rem;
+.body-container > main,
+.body-container > section {
+    @include container;
 }
+
 button {
     height: var(--input-size);
+    width: max-content;
     padding: 0 2.2rem;
 
     border: none;

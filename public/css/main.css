@@ -76,6 +76,7 @@ select {
   --clr-primary-300: hsl(176, 50%, 47%);
   --clr-primary-700: hsl(176, 72%, 28%);
   --clr-neutral-200: hsl(0, 0%, 97%);
+  --clr-neutral-300: hsl(0, 0%, 90%);
   --clr-neutral-400: hsl(0, 0%, 80%);
   --clr-neutral-500: hsl(0, 0%, 60%);
   --clr-neutral-700: hsl(0, 0%, 48%);
@@ -83,7 +84,7 @@ select {
   --ff: "Commissioner", sans-serif;
   --margin-container: 7vw;
   --padding-default: 1.5rem;
-  --input-size: 3rem;
+  --input-size: 3.7rem;
 }
 
 body {
@@ -99,15 +100,22 @@ p {
   color: var(--clr-neutral-500);
 }
 
-.container > main,
-.container > section {
+.body-container > main,
+.body-container > section {
+  margin: 1.3rem auto;
+  width: min(100vw - 6rem, 50rem);
   background-color: white;
-  margin: 1.3rem var(--margin-container);
   border-radius: 1rem;
+  overflow: hidden;
+}
+.body-container > main:first-child,
+.body-container > section:first-child {
+  margin-top: 0;
 }
 
 button {
   height: var(--input-size);
+  width: max-content;
   padding: 0 2.2rem;
   border: none;
   background-color: var(--clr-primary-300);
@@ -124,7 +132,10 @@ button {
 
 .product-container {
   border-radius: 1rem;
-  border: 1px var(--clr-neutral-500) solid;
+  border: 2px var(--clr-neutral-300) solid;
+}
+.product-container.product-chosen {
+  border: 2px var(--clr-primary-300) solid;
 }
 .product-container header {
   margin: 1.5rem;
@@ -180,7 +191,7 @@ article > .product-container article button {
   display: block;
 }
 
-dialog .product-container header input {
+.modal .product-container header input {
   display: block;
 }
 
@@ -287,7 +298,7 @@ dialog .product-container header input {
   background-color: var(--clr-neutral-400);
 }
 
-body > header {
+.body > header {
   position: absolute;
   left: 0;
   top: 0;
@@ -299,7 +310,7 @@ body > header {
   background-size: contain;
   padding: 2rem var(--margin-container);
 }
-body > header li {
+.body > header li {
   display: none;
 }
 
@@ -342,8 +353,8 @@ main::before {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 3.7rem;
-  height: 3.7rem;
+  width: var(--input-size);
+  height: var(--input-size);
   background-image: url(../assets/logo-mastercraft.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -406,11 +417,58 @@ main::before {
   transform: translateX(-50%);
 }
 
-body {
-  background-color: var(--clr-neutral-200);
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.container {
-  position: relative;
-  top: 50vw;
+.modal-container {
+  margin: 1.3rem auto;
+  margin: 0 auto;
+  width: min(100vw - 6rem, 50rem);
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: absolute;
+  top: 30vw;
+  left: 0;
+  right: 0;
+}
+.modal-container:first-child {
+  margin-top: 0;
+}
+
+.back-project-modal {
+  padding: var(--padding-default);
+}
+
+.body-container {
+  position: absolute;
+  top: 60vw;
+  left: 0;
+  right: 0;
+}
+
+.body-container > main {
+  margin-top: 0;
+}
+
+.thank-you-modal {
+  padding: var(--padding-default);
+  position: fixed;
+  inset: 0px;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: fit-content;
+  text-align: center;
+}
+.thank-you-modal > * {
+  margin: 1rem 0;
+}
+
+body {
+  background-color: var(--clr-neutral-200);
 }

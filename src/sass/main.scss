@@ -1,9 +1,9 @@
+@import 'abstract/mixins';
+
 @import 'base/reset';
 @import 'base/font';
 @import 'base/root';
 @import 'base/base';
-
-@import 'abstract/mixins';
 
 @import 'components/producs-ul';
 @import 'components/products-display';
@@ -16,4 +16,9 @@
 @import 'layouts/main';
 @import 'layouts/about-section';
 @import 'layouts/info-section';
+@import 'layouts/modal';
+@import 'layouts/body';
+
+@import 'layouts/modals/thank-you-modal';
+
 @import 'pages/index';

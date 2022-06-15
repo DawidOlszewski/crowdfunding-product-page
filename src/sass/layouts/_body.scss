@@ -1,0 +1,11 @@
+.body {
+    // width: fit-content;
+}
+
+.body-container {
+    @include content-container-positioning;
+}
+
+.body-container > main {
+    margin-top: 0;
+}

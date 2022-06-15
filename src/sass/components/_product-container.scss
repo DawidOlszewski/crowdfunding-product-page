@@ -1,6 +1,10 @@
 .product-container {
     border-radius: 1rem;
-    border: 1px var(--clr-neutral-500) solid;
+    border: 2px var(--clr-neutral-300) solid;
+
+    &.product-chosen {
+        border: 2px var(--clr-primary-300) solid;
+    }
 
     header {
         margin: 1.5rem;
@@ -81,7 +85,7 @@ article > .product-container {
     }
 }
 
-dialog .product-container {
+.modal .product-container {
     header {
         input {
             display: block;

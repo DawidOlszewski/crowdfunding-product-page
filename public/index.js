@@ -1,8 +1,6 @@
 const dialog = document.querySelector('dialog')
 const radios = [...document.querySelectorAll('input[type="radio"]')]
 
-console.log(radios)
-
 radios.forEach((radio) => {
     radio.addEventListener(
         'click',

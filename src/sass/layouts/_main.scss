@@ -32,8 +32,7 @@ main {
         top: 0;
         left: 50%;
 
-        width: 3.7rem;
-        height: 3.7rem;
+        @include icon-size;
 
         background-image: url(../assets/logo-mastercraft.svg);
         background-repeat: no-repeat;

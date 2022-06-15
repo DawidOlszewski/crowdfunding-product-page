@@ -1,4 +1,4 @@
-body > header {
+.body > header {
     position: absolute;
     left: 0;
     top: 0;
@@ -15,18 +15,6 @@ body > header {
     li {
         display: none;
     }
-
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     bottom: 0;
-    //     right: 0;
-
-    //     opacity: 0.3;
-    //     background: linear-gradient(45deg, black, transparent);
-    // }
 }
 
 .header-container {

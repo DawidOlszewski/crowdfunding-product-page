@@ -1,35 +1,33 @@
-const dialog = document.querySelector('dialog')
 const radios = [...document.querySelectorAll('input[type="radio"]')]
+
+const buttonBack0 = document.querySelector(['btn-back-0'])
+const buttonBack1 = document.querySelector(['btn-back-1'])
+const buttonBack2 = document.querySelector(['btn-back-2'])
+const buttonContinue = [...document.querySelectorAll(['btn-continue'])]
 
 radios.forEach((radio) => {
     radio.addEventListener(
         'click',
         ({ target }) => {
-            radios.forEach((tempRadio) => {
-                tempRadio.parentElement.parentElement.classList.toggle(
-                    'product-checked',
-                    false
-                )
-            })
-
-            target.parentElement.parentElement.classList.toggle(
-                'product-checked',
-                target.checked
-            )
+            removeCheckedClassInContainers()
+            AddCheckedClassToContainer(target)
         },
         false
     )
 })
 
-dialog.showModal()
+function removeCheckedClassInContainers() {
+    radios.forEach((tempRadio) => {
+        tempRadio.parentElement.parentElement.classList.toggle(
+            'product-checked',
+            false
+        )
+    })
+}
 
-document.addEventListener('keydown', (event) => {
-    if (event.code === 'Space') {
-        if (dialog.hasAttribute('open')) {
-            console.log('dialog open')
-            dialog.close()
-        } else {
-            dialog.showModal()
-        }
-    }
-})
+function AddCheckedClassToContainer(target) {
+    target.parentElement.parentElement.classList.toggle(
+        'product-checked',
+        target.checked
+    )
+}

@@ -6,11 +6,13 @@ const buttonBack2 = document.querySelector('[btn-back-2]')
 const buttonEnd = document.querySelector('[btn-end]')
 const buttonCloseModal = document.querySelector('[btn-close-modal]')
 const buttonContinueList = [...document.querySelectorAll('[btn-continue]')]
+const buttonMenu = document.querySelector('[btn-menu]')
 
 const modalBackdrop = document.querySelector('[modal-backdrop]')
 const backProjectModal = document.querySelector('[back-project-modal]')
 // prettier-ignore
 const thankYouModal = document.querySelector('[thank-you-modal]')
+const menu = document.querySelector('[menu]')
 
 // prettier-ignore
 const buttonBackList = [buttonBack0, buttonBack1, buttonBack2]
@@ -33,6 +35,10 @@ buttonBackList.forEach((button, index) => {
 buttonEnd.addEventListener('click', closeModals)
 
 buttonCloseModal.addEventListener('click', closeModals)
+
+buttonMenu.addEventListener('click', () => {
+    menu.classList.toggle('invisible', buttonMenu.checked)
+})
 
 radios.forEach((radio) => {
     radio.addEventListener(

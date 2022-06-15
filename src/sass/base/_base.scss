@@ -16,6 +16,10 @@ p {
     @include container;
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 button {
     height: var(--input-size);
     width: max-content;

@@ -52,14 +52,16 @@
                         and eye strain.
                     </p>
                     <div class="bookmark-container">
-                        <button btn-back-0>Back this project</button>
+                        <button btn-select-0>Back this project</button>
                         <label>
                             <input
                                 type="checkbox"
                                 name="product-chosenbookedmarked"
-                                id="" />
-                            <img src="assets/icon-bookmark.svg" alt=""
-                        /></label>
+                                id=""
+                            />
+                            <img src="assets/icon-bookmark.svg" alt="" />
+                            <p>Bookmark</p>
+                        </label>
                     </div>
                 </main>
 
@@ -106,110 +108,89 @@
 
                     <article class="products-display">
                         <div class="product-container">
-                            <header>
-                                <input
-                                    type="radio"
-                                    name="product-chosen"
-                                    id=""
-                                />
-                                <div>
-                                    <h3>Bamboo Stand</h3>
-                                    <p class="pledge-info">
-                                        Pledge $25 or more
-                                    </p>
-                                </div>
-                            </header>
-                            <article>
-                                <p>
-                                    You get an ergonomic stand made of natural
-                                    bamboo. You've helped us launch our
-                                    promotional campaign, and you’ll be added to
-                                    a special Backer member list.
-                                </p>
-                                <div class="product-purchase">
-                                    <p>
-                                        <span class="product-amount">101</span>
-                                        left
-                                    </p>
-                                    <button btn-back-1 class="select-reward">
-                                        Select Reward
-                                    </button>
-                                </div>
-                            </article>
+                            <div class="radio-icon">icon</div>
+                            <input type="radio" name="product-chosen" id="" />
+                            <div class="product-heading">
+                                <h3>Bamboo Stand</h3>
+                                <p class="pledge-info">Pledge $25 or more</p>
+                            </div>
+                            <p class="product-details">
+                                You get an ergonomic stand made of natural
+                                bamboo. You've helped us launch our promotional
+                                campaign, and you’ll be added to a special
+                                Backer member list.
+                            </p>
+                            <p class="product-amount">
+                                <span>101</span>
+                                left
+                            </p>
+                            <button class="select-reward" btn-select-1>
+                                Select Reward
+                            </button>
                             <footer>
                                 <p>Enter you pledge</p>
                                 <div>
                                     <input type="text" name="" id="" />
-                                    <button type="submit">Continue</button>
+                                    <button btn-continue type="submit">
+                                        Continue
+                                    </button>
                                 </div>
                             </footer>
                         </div>
                         <div class="product-container">
-                            <header>
-                                <input
-                                    type="radio"
-                                    name="product-chosen"
-                                    checked
-                                />
-                                <div>
-                                    <h3>Black Edition Stand</h3>
-                                    <p class="pledge-info">
-                                        Pledge $75 or more
-                                    </p>
-                                </div>
-                            </header>
-                            <article>
-                                <p>
-                                    You get a Black Special Edition computer
-                                    stand and a personal thank you. You’ll be
-                                    added to our Backer member list. Shipping is
-                                    included.
-                                </p>
-                                <div class="product-purchase">
-                                    <p>
-                                        <span class="product-amount">64</span>
-                                        left
-                                    </p>
-                                    <button btn-back-2 class="select-reward">
-                                        Select Reward
-                                    </button>
-                                </div>
-                            </article>
+                            <div class="radio-icon">icon</div>
+                            <input type="radio" name="product-chosen" id="" />
+                            <div class="product-heading">
+                                <h3>Black Edition Stand</h3>
+                                <p class="pledge-info">Pledge $75 or more</p>
+                            </div>
+                            <p class="product-details">
+                                You get a Black Special Edition computer stand
+                                and a personal thank you. You’ll be added to our
+                                Backer member list. Shipping is included.
+                            </p>
+                            <p class="product-amount">
+                                <span>64</span>
+                                left
+                            </p>
+                            <button class="select-reward" btn-select-2>
+                                Select Reward
+                            </button>
                             <footer>
                                 <p>Enter you pledge</p>
                                 <div>
                                     <input type="text" name="" id="" />
-                                    <button type="submit">Continue</button>
+                                    <button btn-continue type="submit">
+                                        Continue
+                                    </button>
                                 </div>
                             </footer>
                         </div>
-                        <div class="product-container">
-                            <header>
-                                <input type="radio" name="product-chosen" />
-                                <div>
-                                    <h3>Mahogany Special Edition</h3>
-                                    <p class="pledge-info">
-                                        Pledge $200 or more
-                                    </p>
-                                </div>
-                            </header>
-                            <article>
-                                <p>
-                                    You get two Special Edition Mahogany stands,
-                                    a Backer T-Shirt, and a personal thank you.
-                                    You’ll be added to our Backer member list.
-                                    Shipping is included
-                                </p>
-                                <div class="product-purchase">
-                                    <p>
-                                        <span class="product-amount">0</span>
-                                        left
-                                    </p>
-                                    <button class="select-reward" disabled>
-                                        Out of stock
-                                    </button>
-                                </div>
-                            </article>
+                        <div class="product-container product-disabled">
+                            <div class="radio-icon">icon</div>
+                            <input
+                                type="radio"
+                                name="product-chosen"
+                                disabled
+                                id=""
+                            />
+                            <div class="product-heading">
+                                <h3>Mahogany Special Edition</h3>
+                                <p class="pledge-info">Pledge $200 or more</p>
+                            </div>
+                            <p class="product-details">
+                                You get two Special Edition Mahogany stands, a
+                                Backer T-Shirt, and a personal thank you. You’ll
+                                be added to our Backer member list. Shipping is
+                                included
+                            </p>
+                            <p class="product-amount">
+                                <span>0</span>
+                                left
+                            </p>
+                            <button class="select-reward" disabled>
+                                Out of Stock
+                            </button>
                             <footer>
                                 <p>Enter you pledge</p>
                                 <div>
@@ -245,25 +226,18 @@
 
                 <article class="products-display">
                     <div class="product-container">
-                        <header>
-                            <input type="radio" name="product-chosen" id="" />
-                            <div>
-                                <h3>Pledge with no reward</h3>
-                            </div>
-                        </header>
-                        <article>
-                            <p>
-                                Choose to support us without a reward if you
-                                simply believe in our project. As a backer, you
-                                will be signed up to receive product updates via
-                                email.
-                            </p>
-                            <div class="product-purchase">
-                                <button class="select-reward">
-                                    Select Reward
-                                </button>
-                            </div>
-                        </article>
+                        <div class="radio-icon">icon</div>
+
+                        <input type="radio" name="product-chosen" id="" />
+                        <div class="product-heading">
+                            <h3>Pledge with no reward</h3>
+                        </div>
+                        <p class="product-details">
+                            Choose to support us without a reward if you simply
+                            believe in our project. As a backer, you will be
+                            signed up to receive product updates via email.
+                        </p>
+                        <button class="select-reward">Select Reward</button>
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
@@ -275,64 +249,22 @@
                         </footer>
                     </div>
                     <div class="product-container">
-                        <header>
-                            <input type="radio" name="product-chosen" id="" />
-                            <div>
-                                <h3>Bamboo Stand</h3>
-                                <p class="pledge-info">Pledge $25 or more</p>
-                            </div>
-                        </header>
-                        <article>
-                            <p>
-                                You get an ergonomic stand made of natural
-                                bamboo. You've helped us launch our promotional
-                                campaign, and you’ll be added to a special
-                                Backer member list.
-                            </p>
-                            <div class="product-purchase">
-                                <p>
-                                    <span class="product-amount">101</span>
-                                    left
-                                </p>
-                                <button class="select-reward">
-                                    Select Reward
-                                </button>
-                            </div>
-                        </article>
-                        <footer>
-                            <p>Enter you pledge</p>
-                            <div>
-                                <input type="text" name="" id="" />
-                                <button btn-continue type="submit">
-                                    Continue
-                                </button>
-                            </div>
-                        </footer>
-                    </div>
-                    <div class="product-container product-checked">
-                        <header>
-                            <input type="radio" name="product-chosen" checked />
-                            <div>
-                                <h3>Black Edition Stand</h3>
-                                <p class="pledge-info">Pledge $75 or more</p>
-                            </div>
-                        </header>
-                        <article>
-                            <p>
-                                You get a Black Special Edition computer stand
-                                and a personal thank you. You’ll be added to our
-                                Backer member list. Shipping is included.
-                            </p>
-                            <div class="product-purchase">
-                                <p>
-                                    <span class="product-amount">64</span>
-                                    left
-                                </p>
-                                <button class="select-reward">
-                                    Select Reward
-                                </button>
-                            </div>
-                        </article>
+                        <div class="radio-icon">icon</div>
+                        <input type="radio" name="product-chosen" id="" />
+                        <div class="product-heading">
+                            <h3>Bamboo Stand</h3>
+                            <p class="pledge-info">Pledge $25 or more</p>
+                        </div>
+                        <p class="product-details">
+                            You get an ergonomic stand made of natural bamboo.
+                            You've helped us launch our promotional campaign,
+                            and you’ll be added to a special Backer member list.
+                        </p>
+                        <p class="product-amount">
+                            <span>101</span>
+                            left
+                        </p>
+                        <button class="select-reward">Select Reward</button>
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
@@ -344,34 +276,55 @@
                         </footer>
                     </div>
                     <div class="product-container">
-                        <header>
-                            <input
-                                type="radio"
-                                name="product-chosen"
-                                disabled
-                            />
+                        <div class="radio-icon">icon</div>
+                        <input type="radio" name="product-chosen" id="" />
+                        <div class="product-heading">
+                            <h3>Black Edition Stand</h3>
+                            <p class="pledge-info">Pledge $75 or more</p>
+                        </div>
+                        <p class="product-details">
+                            You get a Black Special Edition computer stand and a
+                            personal thank you. You’ll be added to our Backer
+                            member list. Shipping is included.
+                        </p>
+                        <p class="product-amount">
+                            <span>64</span>
+                            left
+                        </p>
+                        <button class="select-reward">Select Reward</button>
+                        <footer>
+                            <p>Enter you pledge</p>
                             <div>
-                                <h3>Mahogany Special Edition</h3>
-                                <p class="pledge-info">Pledge $200 or more</p>
-                            </div>
-                        </header>
-                        <article>
-                            <p>
-                                You get two Special Edition Mahogany stands, a
-                                Backer T-Shirt, and a personal thank you. You’ll
-                                be added to our Backer member list. Shipping is
-                                included
-                            </p>
-                            <div class="product-purchase">
-                                <p>
-                                    <span class="product-amount">0</span>
-                                    left
-                                </p>
-                                <button class="select-reward" disabled>
-                                    Out of stock
+                                <input type="text" name="" id="" />
+                                <button btn-continue type="submit">
+                                    Continue
                                 </button>
                             </div>
-                        </article>
+                        </footer>
+                    </div>
+                    <div class="product-container product-disabled">
+                        <div class="radio-icon">icon</div>
+                        <input
+                            type="radio"
+                            name="product-chosen"
+                            disabled
+                            id=""
+                        />
+                        <div class="product-heading">
+                            <h3>Mahogany Special Edition</h3>
+                            <p class="pledge-info">Pledge $200 or more</p>
+                        </div>
+                        <p class="product-details">
+                            You get two Special Edition Mahogany stands, a
+                            Backer T-Shirt, and a personal thank you. You’ll be
+                            added to our Backer member list. Shipping is
+                            included
+                        </p>
+                        <p class="product-amount">
+                            <span>0</span>
+                            left
+                        </p>
+                        <button class="select-reward">Select Reward</button>
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
@@ -382,6 +335,7 @@
                     </div>
                 </article>
             </div>
+
             <div
                 class="thank-you-modal modal-container invisible"
                 thank-you-modal

@@ -10,6 +10,11 @@
 }
 
 .data {
+    @media (min-width: 600px) {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
     div {
         position: relative;
 
@@ -21,6 +26,15 @@
 
         font-size: 0.9rem;
         font-weight: 500;
+
+        @media (min-width: 600px) {
+            width: 100%;
+            align-items: start;
+
+            &:not(:first-child) {
+                padding-left: 2rem;
+            }
+        }
 
         h3 {
             font-weight: 900;
@@ -38,6 +52,15 @@
             background-color: var(--clr-neutral-400);
 
             transform: translateX(-50%);
+
+            @media (min-width: 600px) {
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 0.5px;
+                height: 100%;
+                left: initial;
+            }
         }
     }
 }

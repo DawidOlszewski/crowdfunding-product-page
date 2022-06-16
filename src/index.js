@@ -1,8 +1,8 @@
 const radios = [...document.querySelectorAll('input[type="radio"]')]
 
-const buttonBack0 = document.querySelector('[btn-back-0]')
-const buttonBack1 = document.querySelector('[btn-back-1]')
-const buttonBack2 = document.querySelector('[btn-back-2]')
+const buttonSelect0 = document.querySelector('[btn-select-0]')
+const buttonSelect1 = document.querySelector('[btn-select-1]')
+const buttonSelect2 = document.querySelector('[btn-select-2]')
 const buttonEnd = document.querySelector('[btn-end]')
 const buttonCloseModal = document.querySelector('[btn-close-modal]')
 const buttonContinueList = [...document.querySelectorAll('[btn-continue]')]
@@ -15,7 +15,7 @@ const thankYouModal = document.querySelector('[thank-you-modal]')
 const menu = document.querySelector('[menu]')
 
 // prettier-ignore
-const buttonBackList = [buttonBack0, buttonBack1, buttonBack2]
+const buttonBackList = [buttonSelect0, buttonSelect1, buttonSelect2]
 
 buttonContinueList.forEach((btn) =>
     btn.addEventListener('click', () => {
@@ -53,16 +53,13 @@ radios.forEach((radio) => {
 
 function removeCheckedClassFromContainers() {
     radios.forEach((tempRadio) => {
-        tempRadio.parentElement.parentElement.classList.toggle(
-            'product-checked',
-            false
-        )
+        tempRadio.parentElement.classList.toggle('product-checked', false)
     })
 }
 
 function addCheckedClassToContainer(target) {
     target.checked = true
-    target.parentElement.parentElement.classList.toggle('product-checked', true)
+    target.parentElement.classList.toggle('product-checked', true)
 }
 
 function checkProduct(index) {

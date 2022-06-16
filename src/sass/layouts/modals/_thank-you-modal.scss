@@ -4,11 +4,12 @@
     position: fixed;
     inset: 0px;
     margin: auto;
+    max-width: 30rem;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    height: fit-content;
+    height: min-content;
 
     text-align: center;
 

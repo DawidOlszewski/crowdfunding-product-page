@@ -1,3 +1,8 @@
+const bookmarkContainer = document.querySelector('[bookmark-container]')
+const bookmarkCheckbox = document.querySelector('[bookmark-checkbox]')
+const bookmarkLabel = document.querySelector('[bookmark-label]')
+// const bookmarkImg = document.querySelector('[bookmark-img]')
+
 const radios = [...document.querySelectorAll('input[type="radio"]')]
 
 const buttonSelect0 = document.querySelector('[btn-select-0]')
@@ -17,10 +22,22 @@ const menu = document.querySelector('[menu]')
 // prettier-ignore
 const buttonBackList = [buttonSelect0, buttonSelect1, buttonSelect2]
 
+bookmarkLabel.addEventListener('click', (e) => {
+    bookmarkContainer.classList.toggle('bookmarked', bookmarkCheckbox.checked)
+    bookmarkContainer.querySelector('p').innerText = bookmarkCheckbox.checked
+        ? 'Bookmarked'
+        : 'Bookmark'
+})
+
 buttonContinueList.forEach((btn) =>
-    btn.addEventListener('click', () => {
-        closeModals()
-        openModal(thankYouModal)
+    btn.addEventListener('click', ({ target }) => {
+        // target.previousElementSibling.setCustomValidity('incorrect value')
+        let input = target.parentElement.querySelector('input')
+
+        if (input.reportValidity()) {
+            closeModals()
+            openModal(thankYouModal)
+        }
     })
 )
 

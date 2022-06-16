@@ -149,7 +149,7 @@ button {
     grid-template-areas: "product-heading product-heading" "product-details product-details" "product-amount select-reward";
   }
 }
-.product-container input {
+.product-container > input {
   display: none;
 }
 .product-container .radio-icon {
@@ -179,12 +179,40 @@ button {
   display: flex;
   justify-content: space-between;
 }
-.product-container footer input {
+.product-container footer .input-container {
+  position: relative;
   height: var(--input-size);
-  max-width: 15rem;
+  max-width: 8rem;
   width: 50%;
-  padding: 0 2rem 0 3rem;
+  padding: 0 1.5rem 0.1rem 2.5rem;
   border-radius: 5rem;
+  border: 2px var(--clr-neutral-400) solid;
+  display: flex;
+  align-items: center;
+}
+.product-container footer .input-container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.product-container footer .input-container input:focus {
+  outline: none;
+}
+.product-container footer .input-container input::-webkit-outer-spin-button, .product-container footer .input-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product-container footer .input-container:before {
+  content: "$";
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--clr-neutral-400);
+  position: absolute;
+  left: 1.75rem;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 .product-container footer::before {
   content: "";
@@ -211,7 +239,7 @@ button {
 .modal .product-container > button {
   display: none;
 }
-.modal .product-container input {
+.modal .product-container > input {
   margin: auto auto auto 0;
   grid-area: radio-icon;
   display: block;
@@ -445,8 +473,19 @@ main::before {
   display: flex;
   justify-content: space-between;
 }
-.bookmark-container img {
-  height: 100%;
+.bookmark-container .bookmark-icon {
+  display: block;
+  width: var(--input-size);
+  height: var(--input-size);
+}
+.bookmark-container.bookmarked .bookmark-circle {
+  fill: var(--clr-primary-700);
+}
+.bookmark-container.bookmarked p {
+  color: var(--clr-primary-700);
+}
+.bookmark-container.bookmarked .bookmark-inside {
+  fill: white;
 }
 .bookmark-container input {
   display: none;
@@ -466,7 +505,6 @@ main::before {
   }
   .bookmark-container p {
     display: block;
-    width: 100%;
     font-weight: 600;
     font-size: 1rem;
     color: var(--clr-neutral-700);
@@ -598,6 +636,20 @@ main::before {
 }
 .thank-you-modal > * {
   margin: 1rem 0;
+}
+
+.back-project-modal header {
+  margin-bottom: 2rem;
+}
+.back-project-modal header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.back-project-modal header div img {
+  width: 1rem;
+  height: 1rem;
 }
 
 body {

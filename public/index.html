@@ -51,16 +51,22 @@
                         A beautiful & handcrafted monitor stand to reduce neck
                         and eye strain.
                     </p>
-                    <div class="bookmark-container">
+                    <div class="bookmark-container" bookmark-container>
                         <button btn-select-0>Back this project</button>
-                        <label>
+                        <label  bookmark-label>
                             <input
                                 type="checkbox"
                                 name="product-chosenbookedmarked"
                                 id=""
+                                bookmark-checkbox
                             />
-                            <img src="assets/icon-bookmark.svg" alt="" />
-                            <p>Bookmark</p>
+                            <svg class="bookmark-icon" width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" fill-rule="evenodd">
+                                    <circle class="bookmark-circle" fill="#2F2F2F" cx="28" cy="28" r="28"/>
+                                    <path class="bookmark-inside" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
+                                </g>
+                            </svg>
+                            <p>Bookmarked</p>
                         </label>
                     </div>
                 </main>
@@ -130,7 +136,9 @@
                             <footer>
                                 <p>Enter you pledge</p>
                                 <div>
-                                    <input type="text" name="" id="" />
+                                    <div class="input-container">
+                                        <input type="number" name="" id="" />
+                                    </div>
                                     <button btn-continue type="submit">
                                         Continue
                                     </button>
@@ -159,7 +167,9 @@
                             <footer>
                                 <p>Enter you pledge</p>
                                 <div>
-                                    <input type="text" name="" id="" />
+                                    <div class="input-container">
+                                        <input type="number" name="" id="" />
+                                    </div>
                                     <button btn-continue type="submit">
                                         Continue
                                     </button>
@@ -194,7 +204,9 @@
                             <footer>
                                 <p>Enter you pledge</p>
                                 <div>
-                                    <input type="text" name="" id="" />
+                                    <div class="input-container">
+                                        <input type="number" name="" id="" />
+                                    </div>
                                     <button type="submit">Continue</button>
                                 </div>
                             </footer>
@@ -241,10 +253,19 @@
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
-                                <input type="text" name="" id="" />
+                                <div class="input-container">
+                                    <input
+                                        type="number"
+                                        na
+                                        value="0"
+                                        me=""
+                                        id=""
+                                    />
+                                </div>
                                 <button btn-continue type="submit">
-                                    Continue
+                                    Conpledgetinue
                                 </button>
+                                required
                             </div>
                         </footer>
                     </div>
@@ -268,7 +289,16 @@
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
-                                <input type="text" name="" id="" />
+                                <div class="input-container">
+                                    <input
+                                        value="0"
+                                        type="number"
+                                        min="25"
+                                        name="pledge"
+                                        id=""
+                                        required
+                                    />
+                                </div>
                                 <button btn-continue type="submit">
                                     Continue
                                 </button>
@@ -295,7 +325,16 @@
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
-                                <input type="text" name="" id="" />
+                                <div class="input-container">
+                                    <input
+                                        value="0"
+                                        type="number"
+                                        min="75"
+                                        name="pledge"
+                                        id=""
+                                        required
+                                    />
+                                </div>
                                 <button btn-continue type="submit">
                                     Continue
                                 </button>
@@ -328,10 +367,19 @@
                         <footer>
                             <p>Enter you pledge</p>
                             <div>
-                                <input type="text" name="" id="" />
+                                <div class="input-container">
+                                    <input
+                                        type="number"
+                                        na
+                                        value="0"
+                                        me=""
+                                        id=""
+                                    />
+                                </div>
                                 <button type="submit">Continue</button>
-                            </div>
+                            </dpledgeiv>
                         </footer>
+                        required
                     </div>
                 </article>
             </div>

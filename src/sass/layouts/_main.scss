@@ -46,8 +46,25 @@ main {
     display: flex;
     justify-content: space-between;
 
-    img {
-        height: 100%;
+    .bookmark-icon {
+        display: block;
+
+        width: var(--input-size);
+        height: var(--input-size);
+    }
+
+    &.bookmarked {
+        .bookmark-circle {
+            fill: var(--clr-primary-700);
+        }
+
+        p {
+            color: var(--clr-primary-700);
+        }
+
+        .bookmark-inside {
+            fill: white;
+        }
     }
 
     input {
@@ -73,7 +90,6 @@ main {
 
         p {
             display: block;
-            width: 100%;
             font-weight: 600;
             font-size: 1rem;
             color: var(--clr-neutral-700);

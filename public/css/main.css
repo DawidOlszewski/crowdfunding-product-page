@@ -400,7 +400,12 @@ button {
   background-size: cover;
   padding: 2rem var(--margin-container);
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
+  .body > header {
+    height: 53vw;
+  }
+}
+@media (min-width: 1000px) {
   .body > header {
     height: 27.3vw;
     background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent), url(../assets/image-hero-desktop.jpg);
@@ -440,7 +445,12 @@ button {
     margin-top: 0;
   }
 }
-@media (max-width: 599.999px) and (min-width: 800px) {
+@media (max-width: 599.999px) and (min-width: 700px) {
+  .body > header nav {
+    top: 40vw;
+  }
+}
+@media (max-width: 599.999px) and (min-width: 1000px) {
   .body > header nav {
     top: 20vw;
   }
@@ -658,7 +668,12 @@ main::before {
 .modal-container:first-child {
   margin-top: 0;
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
+  .modal-container {
+    top: 40vw;
+  }
+}
+@media (min-width: 1000px) {
   .modal-container {
     top: 20vw;
   }
@@ -674,7 +689,12 @@ main::before {
   left: 0;
   right: 0;
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
+  .body-container {
+    top: 40vw;
+  }
+}
+@media (min-width: 1000px) {
   .body-container {
     top: 20vw;
   }

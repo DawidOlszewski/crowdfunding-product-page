@@ -22,12 +22,20 @@
     }
 }
 
-@mixin content-container-positioning($top: 60vw, $desktop-top: 20vw) {
+@mixin content-container-positioning(
+    $top: 60vw,
+    $tablet-top: 40vw,
+    $desktop-top: 20vw
+) {
     position: absolute;
     top: $top;
     left: 0;
     right: 0;
-    @media (min-width: 800px) {
+
+    @media (min-width: 700px) {
+        top: $tablet-top;
+    }
+    @media (min-width: 1000px) {
         top: $desktop-top;
     }
 }

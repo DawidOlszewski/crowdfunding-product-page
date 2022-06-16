@@ -22,11 +22,14 @@
     }
 }
 
-@mixin content-container-positioning($top: 60vw) {
+@mixin content-container-positioning($top: 60vw, $desktop-top: 20vw) {
     position: absolute;
     top: $top;
     left: 0;
     right: 0;
+    @media (min-width: 800px) {
+        top: $desktop-top;
+    }
 }
 
 @mixin section-padding {

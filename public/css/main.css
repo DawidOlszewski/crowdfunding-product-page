@@ -397,51 +397,80 @@ button {
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent), url(../assets/image-hero-mobile.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 2rem var(--margin-container);
 }
-.body > header nav {
-  margin: 1.3rem auto;
-  margin: 0 auto;
-  width: min(100vw - 6rem, 50rem);
-  background-color: white;
-  border-radius: 1rem;
-  overflow: hidden;
-  position: absolute;
-  top: 17vw;
-  left: 0;
-  right: 0;
-  display: flex;
-  background-color: var(--clr-neutral-200);
-}
-.body > header nav:first-child {
-  margin-top: 0;
-}
-.body > header nav ul {
-  width: 100%;
-  margin: 0;
-}
-.body > header nav li {
-  position: relative;
-}
-.body > header nav li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: var(--clr-neutral-300);
+@media (min-width: 800px) {
+  .body > header {
+    height: 27.3vw;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent), url(../assets/image-hero-desktop.jpg);
+  }
 }
 .body > header nav a {
-  position: relative;
-  display: inline-block;
-  padding: 1rem 1.5rem;
+  display: block;
   width: 100%;
   height: 100%;
-  font-weight: 600;
-  color: black;
+  color: white;
   text-decoration: none;
+}
+@media (min-width: 600px) {
+  .body > header nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .body > header nav.invisible {
+    visibility: visible;
+  }
+}
+@media (max-width: 599.999px) {
+  .body > header nav {
+    margin: 1.3rem auto;
+    margin: 0 auto;
+    width: min(100vw - 6rem, 50rem);
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 17vw;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-neutral-200);
+  }
+  .body > header nav:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 599.999px) and (min-width: 800px) {
+  .body > header nav {
+    top: 20vw;
+  }
+}
+@media (max-width: 599.999px) {
+  .body > header nav ul {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 599.999px) {
+  .body > header nav li {
+    position: relative;
+  }
+  .body > header nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--clr-neutral-300);
+  }
+}
+@media (max-width: 599.999px) {
+  .body > header nav a {
+    color: black;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+  }
 }
 
 .header-container {
@@ -453,6 +482,7 @@ button {
 }
 .header-container img {
   height: 100%;
+  max-height: 1.5rem;
 }
 
 main {
@@ -628,6 +658,11 @@ main::before {
 .modal-container:first-child {
   margin-top: 0;
 }
+@media (min-width: 800px) {
+  .modal-container {
+    top: 20vw;
+  }
+}
 
 .back-project-modal {
   padding: var(--padding-default);
@@ -638,6 +673,11 @@ main::before {
   top: 60vw;
   left: 0;
   right: 0;
+}
+@media (min-width: 800px) {
+  .body-container {
+    top: 20vw;
+  }
 }
 
 .body-container > main {

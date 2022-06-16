@@ -41,6 +41,12 @@ buttonContinueList.forEach((btn) =>
     })
 )
 
+modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        closeModals()
+    }
+})
+
 buttonBackList.forEach((button, index) => {
     button.addEventListener('click', (e) => {
         checkProduct(index)

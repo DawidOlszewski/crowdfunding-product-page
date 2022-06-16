@@ -155,35 +155,54 @@ button {
 .product-container .radio-icon {
   display: none;
 }
+.product-container input[type=radio] {
+  accent-color: var(--clr-primary-300);
+}
 .product-container.product-checked {
   border: 2px var(--clr-primary-300) solid;
 }
 .product-container.product-checked footer {
   display: block;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .product-container.product-checked footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product-container.product-checked footer > div {
+    padding: 0;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
 }
 .product-container.product-disabled {
   filter: opacity(0.6);
 }
 .product-container footer {
   grid-area: footer;
-  margin-top: 1.5rem;
   padding: 1.5rem;
+  padding-bottom: 0;
   position: relative;
   display: none;
-  flex-flow: column nowrap;
-  align-items: center;
+}
+.product-container footer > p {
+  width: max-content;
 }
 .product-container footer > div {
   padding-top: 1rem;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: space-between;
 }
 .product-container footer .input-container {
   position: relative;
   height: var(--input-size);
-  max-width: 8rem;
-  width: 50%;
+  width: 7rem;
   padding: 0 1.5rem 0.1rem 2.5rem;
   border-radius: 5rem;
   border: 2px var(--clr-neutral-400) solid;
@@ -243,6 +262,9 @@ button {
   margin: auto auto auto 0;
   grid-area: radio-icon;
   display: block;
+}
+.modal .product-container .product-amount span {
+  font-size: 1.2rem;
 }
 
 .pledge-info {
